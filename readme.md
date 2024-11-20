@@ -1,5 +1,3 @@
-# Learning Spark and Scala at the same 17:27
+# Learning Spark and Scala at the same time
 
-- Following the book *Spark: The Definitive Guide*
-    - repo: [databricks/Spark-The-Definitive-Guide](https://github.com/databricks/Spark-The-Definitive-Guide/tree/master)
-        - code and data
+Following the book *Spark: The Definitive Guide* (code and data in github repo [databricks/Spark-The-Definitive-Guide](https://github.com/databricks/Spark-The-Definitive-Guide/tree/master))
