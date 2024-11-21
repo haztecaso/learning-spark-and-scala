@@ -1,6 +1,6 @@
 # Learning Spark and Scala at the same time
 
-## Entrypoint
+## Entrypoints
 
 - I'm writing my Spark programs in
   [*SparkApp*](./src/main/scala/example/SparkApp.scala) main function.
