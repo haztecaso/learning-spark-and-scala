@@ -14,6 +14,7 @@ lazy val root = (project in file("."))
     name := "LearningSpark",
     libraryDependencies ++= Seq(
       "org.apache.spark" %% "spark-sql" % "3.5.3",
+      "com.softwaremill.sttp.client3" %% "core" % "3.9.0",
       munit % Test
     ),
     fork := true
