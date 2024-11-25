@@ -15,6 +15,10 @@
   [*nix flakes*](https://nixos.wiki/wiki/Flakes) and
   [*sbt-derivation*](https://github.com/zaninime/sbt-derivation/tree/master).
 
+- Scala development tools: I'm using neovim + metals, configured with nixvim.
+  You can check my configuration files in 
+  [haztecaso/neovim-flake](https://github.com/haztecaso/neovim-flake).
+
 ### Spark 
 
 - I'm following this book: *Spark: The Definitive Guide* (code and data in
