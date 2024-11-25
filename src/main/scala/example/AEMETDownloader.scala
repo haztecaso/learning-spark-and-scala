@@ -1,4 +1,4 @@
-import sttp.client3._
+import sttp.client3.{HttpClientSyncBackend, basicRequest, RequestT}
 import sttp.model.Uri
 import java.io.{File, PrintWriter}
 
@@ -8,14 +8,16 @@ object AEMETDownloader {
 
     println(s"descargando datos de $url")
 
+    val aemetApiKey = sys.env.getOrElse("AEMET_API_KEY", ???)
+
     val backend = HttpClientSyncBackend()
 
     val request = basicRequest.get(Uri.parse(url).getOrElse {
       throw new IllegalArgumentException(s"URL inválida: $url")
     })
-    val response = request.send(backend)
 
-       response.body match {
+    val response = request.send(backend)
+    response.body match {
       case Right(data) =>
         println("Datos descargados con éxito.")
         saveToFile("data/aemet.json", data)
@@ -23,7 +25,6 @@ object AEMETDownloader {
       case Left(error) =>
         println(s"Error al descargar los datos:\n$error")
     }
-
     backend.close()
   }
 
